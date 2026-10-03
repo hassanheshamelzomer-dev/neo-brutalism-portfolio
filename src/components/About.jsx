@@ -2,34 +2,35 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="w-full bg-[#FAF8F5] py-20 px-4 border-b-[2.5px] border-black scroll-mt-16">
+    <section id="about" className="w-full bg-neo-cream py-20 px-4 border-b-[3px] border-black scroll-mt-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 flex items-center gap-4 text-black uppercase tracking-tight">
-          <span className="material-symbols-outlined text-5xl text-[#800020]">school</span>
+        <h2 className="text-4xl md:text-5xl font-black mb-12 flex items-center gap-4 text-black uppercase tracking-tight">
+          <span className="material-symbols-outlined text-5xl md:text-6xl text-black">school</span>
           Education
         </h2>
-        <div className="card-brutal flex flex-col md:flex-row gap-6 items-start">
-          <div className="icon-box bg-[#D8B4FE] shrink-0">
-            <span className="material-symbols-outlined text-3xl">account_balance</span>
-          </div>
-          <div className="flex-grow">
-            <div className="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-4">
-              <div>
-                <h3 className="text-3xl font-bold text-black mb-2">Bachelor of Science in Computers and Artificial Intelligence</h3>
-                <p className="text-xl text-gray-800 font-bold bg-[#D4FF00] px-2 py-1 inline-block border-2 border-black rounded shadow-[2px_2px_0px_0px_#000]">
-                  Cairo National University (CNU)
-                </p>
+        <div className="card-brutal card-brutal-hover p-8 md:p-10 flex flex-col gap-6 items-start">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-4 pb-6 border-b-[3px] border-black">
+            <div className="flex items-center gap-4">
+              <div className="icon-box bg-neo-lavender shrink-0">
+                <span className="material-symbols-outlined text-3xl">account_balance</span>
               </div>
-              <div className="text-right md:text-left shrink-0">
-                <span className="chip-brutal bg-white !cursor-default inline-block">
-                  Expected Graduation: 2029
-                </span>
-              </div>
+              <h3 className="text-2xl md:text-3xl font-black text-black leading-tight">
+                Bachelor of Science in Computers and AI
+              </h3>
             </div>
-            <p className="text-lg flex items-center gap-2 font-bold bg-[#7DD3FC] text-black px-4 py-2 rounded-xl border-[2.5px] border-black w-fit shadow-[2px_2px_0px_0px_#000]">
-              <span className="material-symbols-outlined">trending_up</span>
-              Current Status: 2nd Year Student
-            </p>
+            <span className="text-xl text-black font-bold bg-neo-lime px-4 py-2 border-[3px] border-black rounded-sm shadow-[4px_4px_0px_0px_#000] shrink-0 transform -rotate-2">
+              Graduation: 2029
+            </span>
+          </div>
+          
+          <div className="flex flex-wrap gap-4 w-full">
+             <span className="chip-brutal bg-white !cursor-default text-lg px-5 py-3">
+              Cairo National University (CNU)
+            </span>
+            <span className="chip-brutal bg-neo-blue !cursor-default text-lg px-5 py-3">
+              <span className="material-symbols-outlined text-xl">trending_up</span>
+              2nd Year Student
+            </span>
           </div>
         </div>
       </div>

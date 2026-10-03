@@ -7,21 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'm3-primary': '#D0BCFF',
-        'm3-primary-dark': '#6750A4',
-        'm3-secondary': '#CCC2DC',
-        'm3-surface': '#FEF7FF',
-        'm3-surface-dark': '#141218',
-        'm3-container': '#EADDFF',
-        'm3-error': '#B3261E',
-      },
-      boxShadow: {
-        'brutal': '4px 4px 0px 0px #000',
-        'brutal-hover': '2px 2px 0px 0px #000',
-        'brutal-focus': '4px 4px 0px 0px #000',
+        'neo-lime': '#CCFF00',
+        'neo-lavender': '#EADCFE',
+        'neo-coral': '#FF5757',
+        'neo-blue': '#7DD3FC',
+        'neo-cream': '#FAF8F5',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'], // Standard Material 3 font
+        sans: ['Roboto', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif'],
       }
     },
   },

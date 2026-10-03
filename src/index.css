@@ -4,50 +4,70 @@
 
 @layer base {
   body {
-    @apply bg-white text-black font-sans;
+    @apply bg-white text-black font-sans scroll-smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
 
 @layer components {
-  /* Neo-brutalist M3 button */
+  /* Common border and shadow settings */
+  .brutal-border {
+    @apply border-2 border-black md:border-[3px];
+  }
+  .brutal-shadow {
+    @apply shadow-[4px_4px_0px_0px_#000] md:shadow-[6px_6px_0px_#000];
+  }
+  .brutal-hover-shadow {
+    @apply shadow-[6px_6px_0px_#000] md:shadow-[10px_10px_0px_#000];
+  }
+
+  /* Neo-brutalist buttons */
   .btn-brutal {
-    @apply px-6 py-3 rounded-xl border-[2.5px] border-black font-bold shadow-[4px_4px_0px_0px_#000] transition-all duration-200;
+    @apply px-5 py-3 rounded-sm brutal-border font-bold brutal-shadow transition-all duration-200 cursor-pointer text-center flex items-center justify-center;
   }
   .btn-brutal:hover {
-    @apply translate-x-[2px] translate-y-[2px] shadow-[2px_2px_0px_0px_#000];
+    @apply -translate-x-1 -translate-y-1 brutal-hover-shadow;
+  }
+  .btn-brutal:active {
+    @apply translate-x-1 translate-y-1 shadow-[2px_2px_0px_0px_#000] md:shadow-[2px_2px_0px_0px_#000];
   }
   
   /* FAB */
   .fab-brutal {
-    @apply w-14 h-14 rounded-2xl border-[2.5px] border-black flex items-center justify-center shadow-[4px_4px_0px_0px_#000] transition-all duration-200 cursor-pointer;
+    @apply px-4 py-3 h-14 rounded-sm brutal-border flex items-center justify-center brutal-shadow transition-all duration-200 cursor-pointer font-bold gap-2;
   }
   .fab-brutal:hover {
-    @apply translate-x-[2px] translate-y-[2px] shadow-[2px_2px_0px_0px_#000];
+    @apply -translate-x-1 -translate-y-1 brutal-hover-shadow;
   }
 
   /* Chip */
   .chip-brutal {
-    @apply px-4 py-2 rounded-xl border-[2.5px] border-black bg-white font-bold shadow-[4px_4px_0px_0px_#000] transition-all duration-200 cursor-pointer inline-flex items-center gap-2;
+    @apply px-3 py-1 rounded-sm border-2 border-black font-bold shadow-[2px_2px_0px_0px_#000] transition-all duration-200 cursor-pointer inline-flex items-center gap-2;
   }
   .chip-brutal:hover {
-    @apply translate-x-[2px] translate-y-[2px] shadow-[2px_2px_0px_0px_#000];
+    @apply -translate-x-[2px] -translate-y-[2px] shadow-[4px_4px_0px_0px_#000];
   }
   
   /* Input Field */
   .input-brutal {
-    @apply w-full px-4 py-3 rounded-xl border-[2.5px] border-black bg-white focus:outline-none focus:shadow-[4px_4px_0px_0px_#000] transition-all duration-200;
+    @apply w-full px-4 py-3 rounded-sm brutal-border bg-white placeholder-gray-700 text-black font-medium focus:outline-none focus:ring-0 transition-all duration-200;
+  }
+  .input-brutal:focus {
+    @apply -translate-x-[2px] -translate-y-[2px] brutal-hover-shadow;
   }
 
   /* Surface Card */
   .card-brutal {
-    @apply rounded-2xl border-[2.5px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#000] transition-all duration-200;
+    @apply rounded-sm brutal-border bg-white p-6 md:p-8 brutal-shadow transition-all duration-200;
   }
-  .card-brutal:hover {
-    @apply translate-x-[2px] translate-y-[2px] shadow-[2px_2px_0px_0px_#000];
+  .card-brutal-hover:hover {
+    @apply -translate-x-1 -translate-y-1 brutal-hover-shadow;
   }
 
   /* Icon Box */
   .icon-box {
-    @apply w-14 h-14 rounded-xl border-[2.5px] border-black flex items-center justify-center shadow-[2px_2px_0px_0px_#000] text-black;
+    @apply w-12 h-12 md:w-14 md:h-14 rounded-sm brutal-border flex items-center justify-center shadow-[2px_2px_0px_0px_#000] md:shadow-[4px_4px_0px_0px_#000] text-black shrink-0;
   }
 }
